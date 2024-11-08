@@ -1,3 +1,15 @@
+* Made it a little easier to use with a python script wrapper for the lua code and cmd_decompiler. decomps/disassembles .cso -> .msasm/asm -> .txt for lua script
+split into two python scripts, but runner.py is the main one
+release package contains the entire repo in one exe file so you dont need to download anything else or have cmd_decomp in path
+
+Compiled with nuitka
+
+ ```nuitka --standalone --onefile --main="runner.py" --follow-imports --assume-yes-for-downloads --include-data-files=./dxbc_parse.lua=dxbc_parse.lua --include-data-files=./dxbc_reader.lua=dxbc_reader.lua --include-data-files=./dxbc_def.lua=dxbc_def.lua --include-data-dir=./lua=lua --include-data-files=./cmd_decompiler.exe=cmd_decompiler.exe --output-filename="dxbc_pack_rel.exe"```
+ 
+
+
+
+
 **[feature]**
 
     FULL sm4.0 support(little sm5.0)
